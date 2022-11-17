@@ -4,15 +4,13 @@ namespace app\database\interfaces;
 
 interface ActiveRecordInterface
 {
-  public function update(UpdateInterface $updateInterface);
+  public function execute(ActiveRecordExecuteInterface $activeRecordExecuteInterface);
 
-  public function insert();
+  public function __set($attribute, $value);
 
-  public function delete();
+  public function __get($attribute);
 
-  public function find();
+  public function getTable();
 
-  public function findBy();
-
-  public function all();
+  public function getAttributes();
 }
