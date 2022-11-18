@@ -1,5 +1,6 @@
 <?php
 
+use app\database\activerecord\Delete;
 use app\database\activerecord\Find;
 use app\database\activerecord\Insert;
 use app\database\activerecord\Update;
@@ -9,7 +10,7 @@ require "../vendor/autoload.php";
 
 $user = new User;
 
-$user->firstName = 'João Vitor';
-$user->lastName = 'Pimentel';
+/* $user->firstName = 'João';
+$user->lastName = 'manuel'; */
 
-$user->execute(new Update('id', 1));//valores de no where da query
+echo $user->execute(new Delete('id', '2'));//valores de no where da query
