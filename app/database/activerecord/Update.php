@@ -23,7 +23,7 @@ class Update implements ActiveRecordExecuteInterface
   {
     try {
 
-      $query = $this->creatQuery($activeRecordInterface);
+      $query = $this->createQuery($activeRecordInterface);
 
       $connection = Connection::connect();
 
@@ -40,7 +40,7 @@ class Update implements ActiveRecordExecuteInterface
     }
   }
 
-  private function creatQuery(ActiveRecordInterface $activeRecordInterface)
+  private function createQuery(ActiveRecordInterface $activeRecordInterface)
   {
     if(array_key_exists('id', $activeRecordInterface->getAttributes()))
     {
