@@ -15,4 +15,4 @@ $user = new User;
 /* $user->firstName = 'João';
 $user->lastName = 'manuel'; */
 
-var_dump($user->execute(new FindAll(['id' => '1'], '1', '', 'id')));//valores de no where da query
+var_dump($user->execute(new Insert()));//valores de no where da query
